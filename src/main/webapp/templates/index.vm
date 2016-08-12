@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl-PL" ng-app="houseMedia">
+<head>
+	<meta charset="UTF-8">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<BODY>
+	<div class="navbar-fixed">
+	    <nav>
+	      <div class="nav-wrapper blue darken-4">
+	        <a href="" class="brand-logo"><img class="logo" src="img/angular-icon.svg"></a>
+	        <ul class="right hide-on-med-and-down">
+                <li><a href="#/prad">Prąd</a></li>
+                <li><a href="#/woda">Woda</a></li>
+                <li><a href="#/gaz">Gaz</a></li>
+                <!--<li><a href="#/prad-wykres">Prąd Wykres</a></li>
+                <li><a href="#/woda-wykres">Gaz Wykres</a></li>
+                <li><a href="#/gaz -wykres">Woda Wykres</a></li>-->
+	        </ul>
+	      </div>
+	    </nav>
+  	</div>
+
+  	<ng-view></ng-view>
+
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.min.js"></script>
+<script type="text/javascript" src="js/angular-materialize.min.js"></script>
+<!--<script type="text/javascript" src="js/ng-google-chart.js"></script>-->
+<script type="text/javascript" src="js/app.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+
+
+	})
+</script>
+
+</BODY>
+</html>

@@ -1,0 +1,33 @@
+<div class="row" ng-controller="Logowanie">
+	<div class="col s4  offset-s4  blue lighten-5">
+		<div class="row">
+			<div class="container center-align">
+				 <i class="large material-icons blue-text">assignment_ind</i>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="container center-align">
+				<div class="input-field ">
+	          		<input id="last_name" type="text" ng-model="user.userName">
+	          		<label for="last_name" class="black-text">User Name</label>
+	        	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container center-align">
+				<div class="input-field ">
+	          		<input id="last_name" type="password" ng-model="user.password">
+	          		<label for="last_name">Password</label>
+	        	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container center-align">
+				 <button class="btn blue darken-4" type="submit" name="action" ng-click="zaloguj()">Zaloguj
+			    <i class="material-icons right">send</i>
+			  </button>
+			</div>
+		</div>
+	</div>
+</div>

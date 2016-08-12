@@ -1,0 +1,25 @@
+<div ng-controller="pradCtrl">
+
+	<table class="bordered striped highlight">
+        <thead>
+          <tr>
+          	  <th>Data</th>
+              <th>Różnica</th>
+          	  <th>Przewidywane</th>
+              <th>Rzeczywiste</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr ng-repeat="odczyt in prad">
+              <td>{{odczyt.time}}</td>
+              <td>{{odczyt.difference}}</td>
+              <td>{{odczyt.predicted}}</td>
+              <td>{{odczyt.current}}</td>
+          </tr>
+          
+        </tbody>
+    </table>
+
+  </div>

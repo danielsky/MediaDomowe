@@ -1,0 +1,73 @@
+<div ng-controller="tabelaCtrl">
+
+
+	<input type="text" placeholder="Search..." ng-model="search">
+
+	<select ng-model="pageSize" id="pageSize" class="form-control">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+	</select>
+<button ng-click="currentPage = currentPage - 1" >previous</button>
+{{currentPage}}
+<button ng-click="currentPage = currentPage + 1">next</button>
+
+	<table class="bordered striped highlight">
+        <thead>
+          <tr>
+          	  <th>Długość tablicy</th>
+          	  <th>Index</th>
+              <th >Name</th>
+              <th >Age</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <tr >
+          	<td></td>
+          	<td></td>
+            <td><input type="text" placeholder="Search..." ng-model="nameSearch"></td>
+            <td><input type="text" placeholder="Search..." ng-model="ageSearch"></td>
+          </tr>
+
+          <tr ng-repeat="row in dane | filter: search | filter:{name:nameSearch} | filter:{age:ageSearch}  | startFrom: currentPage*pageSize | limitTo:pageSize">
+          	<td>{{dane.length}}</td>
+          	<td>{{$index}} </td>
+            <td>{{row.name}}</td>
+            <td>{{row.age}}</td>
+          </tr>
+          
+        </tbody>
+    </table>
+
+{{nameSearchExact}} {{ageSearchExact}}
+<table class="bordered striped highlight">
+        <thead>
+          <tr>
+          	  <th>Długość tablicy</th>
+          	  <th>Index</th>
+              <th >Name</th>
+              <th >Age</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <tr >
+          	<td></td>
+          	<td></td>
+            <td><input type="text" placeholder="Search..." ng-model="nameSearchExact"></td>
+            <td><input type="text" placeholder="Search..." ng-model="ageSearchExact"></td>
+          </tr>
+
+          <tr ng-repeat="row in dane | exact:{name:nameSearchExact}">
+          	<td>{{dane.length}}</td>
+          	<td>{{$index}} </td>
+            <td>{{row.name}}</td>
+            <td>{{row.age}}</td>
+          </tr>
+          
+        </tbody>
+    </table>
+
+  </div>
